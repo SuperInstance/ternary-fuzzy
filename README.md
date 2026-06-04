@@ -121,6 +121,13 @@ Part of the **SuperInstance** ternary computing ecosystem:
 - [`ternary-sensor`](https://crates.io/crates/ternary-sensor) — sensor classification and fusion
 - [`ternary-kalman`](https://crates.io/crates/ternary-kalman) — Kalman filtering for ternary states
 
+## Known Limitations
+
+- **Three-valued membership loses granularity**: Membership functions map continuous inputs to just three levels (Low/Medium/High). This coarse quantization loses the nuanced degrees that make fuzzy logic useful compared to binary thresholds.
+- **Fixed membership function shapes**: Only triangular membership functions are provided. Trapezoidal, Gaussian, and sigmoidal shapes — common in control applications — are not supported.
+- **Defuzzification is ternary-valued**: The center-of-gravity defuzzification returns a `TernaryMembership`, not a continuous value, which limits downstream precision.
+- **No adaptive membership**: Membership function parameters (low/mid/high breakpoints) are fixed at construction time with no online learning or adaptation.
+
 ## License
 
 MIT
