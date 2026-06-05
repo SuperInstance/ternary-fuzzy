@@ -131,3 +131,11 @@ Part of the **SuperInstance** ternary computing ecosystem:
 ## License
 
 MIT
+
+## See Also
+- **ternary-logic** — related
+- **ternary-entropy** — related
+- **ternary-classifier** — related
+- **ternary-control** — related
+- **ternary-lattice** — related
+
